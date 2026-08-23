@@ -156,3 +156,16 @@ Sun Aug 23 06:31:33 AM UTC 2026:
  tests:  5|4
 total_score: 20/60
 50838e8
+Sun Aug 23 06:34:54 AM UTC 2026: 
+ list.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:88:31: error: expected ‘;’ before ‘}’ token
+   88 |     return list->current->data
+      |                               ^
+      |                               ;
+   89 | }
+      | ~                              
+9fbabb9
