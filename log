@@ -133,3 +133,14 @@ Sun Aug 23 06:24:20 AM UTC 2026:
  tests:  1|5
 total_score: 10/60
 6a091f5
+Sun Aug 23 06:28:10 AM UTC 2026: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:51:15: error: ‘List’ {aka ‘struct List’} has no member named ‘curent’; did you mean ‘current’?
+   51 |     if (list->curent == NULL) {
+      |               ^~~~~~
+      |               current
+02be095
