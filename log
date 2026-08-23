@@ -73,3 +73,51 @@ list.c:80:6: error: ‘pushBack’ defined but not used [-Werror=unused-function
       |      ^~~~~~~~
 cc1: all warnings being treated as errors
 4cf3c96
+Sun Aug 23 06:20:22 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:76:30: error: expected ‘)’ before ‘data’
+   76 |     Node*createNode = (void * data) malloc(sizeof(Node))
+      |                       ~      ^~~~~
+      |                              )
+list.c:78:1: error: expected ‘,’ or ‘;’ before ‘}’ token
+   78 | }
+      | ^
+test.c: In function ‘initialize_exList’:
+test.c:56:22: error: called object ‘createNode’ is not a function or function pointer
+   56 |      L->head=L->tail=createNode(j);
+      |                      ^~~~~~~~~~
+list.c:76:10: note: declared here
+   76 |     Node*createNode = (void * data) malloc(sizeof(Node))
+      |          ^~~~~~~~~~
+test.c:64:14: error: called object ‘createNode’ is not a function or function pointer
+   64 |          n = createNode(j) ;
+      |              ^~~~~~~~~~
+list.c:76:10: note: declared here
+   76 |     Node*createNode = (void * data) malloc(sizeof(Node))
+      |          ^~~~~~~~~~
+test.c: In function ‘pushFront’:
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+test.c: At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+list.c:107:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  107 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:95:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+   95 | void * popBack(List * list) {
+      |        ^~~~~~~
+list.c:80:6: error: ‘pushBack’ defined but not used [-Werror=unused-function]
+   80 | void pushBack(List * list, void * data) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+e20a85e
